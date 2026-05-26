@@ -1,0 +1,17 @@
+# Go build output
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# IDE
+.vscode/
+.idea/
+
+# Runtime data
+conversations/
+
+# OS
+.DS_Store
+Thumbs.db
