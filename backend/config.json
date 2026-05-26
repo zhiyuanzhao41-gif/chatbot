@@ -1,0 +1,5 @@
+{
+  "model": "deepseek-v4-pro",
+  "system_prompt": "@prompts/sakiko.txt",
+  "base_url": "https://api.deepseek.com"
+}

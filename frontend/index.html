@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TGW客服部</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="bg-layer"></div>
+  <div class="app">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="newChatBtn">+ 新对话</button>
+      </div>
+      <div class="conversation-list" id="conversationList">
+        <!-- Conversations will be loaded here -->
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="chat-area" id="chatArea">
+        <div class="welcome">
+          <h1>TGW客服部</h1>
+          <p>正在为您转接0214号客服……</p>
+        </div>
+      </div>
+
+      <div class="input-area">
+        <div class="input-container">
+          <textarea id="messageInput" placeholder="输入消息..." rows="1"></textarea>
+          <button class="send-btn" id="sendBtn">发送</button>
+        </div>
+      </div>
+    </div>
+
+    <button class="settings-btn" id="settingsBtn">⚙</button>
+
+    <div class="settings-panel" id="settingsPanel">
+      <button class="close-settings" id="closeSettings">×</button>
+      <h3>生成参数</h3>
+
+      <div class="setting-group">
+        <label>Temperature</label>
+        <input type="range" id="temperature" min="0" max="2" step="0.1" value="1">
+        <div class="value" id="temperatureValue">1</div>
+      </div>
+
+      <div class="setting-group">
+        <label>Top P</label>
+        <input type="range" id="topP" min="0" max="1" step="0.05" value="0.7">
+        <div class="value" id="topPValue">0.7</div>
+      </div>
+
+      <div class="setting-group">
+        <label>Max Tokens</label>
+        <input type="range" id="maxTokens" min="64" max="4096" step="64" value="2048">
+        <div class="value" id="maxTokensValue">2048</div>
+      </div>
+
+      <div class="setting-group">
+        <label>Presence Penalty</label>
+        <input type="range" id="presencePenalty" min="-2" max="2" step="0.1" value="0">
+        <div class="value" id="presencePenaltyValue">0</div>
+      </div>
+
+      <div class="setting-group">
+        <label>Frequency Penalty</label>
+        <input type="range" id="frequencyPenalty" min="-2" max="2" step="0.1" value="0">
+        <div class="value" id="frequencyPenaltyValue">0</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    if (window.innerWidth < 768) {
+      location.replace('/static/mobile.html');
+    }
+  </script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
